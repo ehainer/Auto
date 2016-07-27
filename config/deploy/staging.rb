@@ -1,3 +1,8 @@
+set :deploy_to, "/web/magento/auto.com"
+set :branch, "staging"
+
+server "auto.minow.io", user: "magento", port: "22", roles: %w{web app}, primary: true
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
