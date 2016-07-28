@@ -14,4 +14,4 @@ set :ssh_options, {
 set :pty, true
 
 set :linked_dirs, fetch(:linked_dirs, []).push("var", "media", "sitemaps")
-set :linked_files, fetch(:linked_files, []).push("app/etc/local.xml", "config/app.json")
+set :linked_files, fetch(:linked_files, []).push("config/app.json") # "app/etc/local.xml", 
