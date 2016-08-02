@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<CK_Site>
+			<version>0.1.0</version>
+		</CK_Site>
+	</modules>
+
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<CK_Site_Adminhtml before="Mage_Adminhtml">CK_Site_Adminhtml</CK_Site_Adminhtml>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+
+	<frontend>
+		<routers>
+			<ck_site>
+				<use>standard</use>
+				<args>
+					<module>CK_Site</module>
+					<frontName>restomotive</frontName>
+				</args>
+			</ck_site>
+		</routers>
+		<layout>
+			<updates>
+				<ck_site>
+					<file>ck/site.xml</file>
+				</ck_site>
+			</updates>
+		</layout>
+	</frontend>
+
+	<global>
+		<models>
+			<ck_site>
+				<class>CK_Site_Model</class>
+			</ck_site>
+			<!--
+			<catalog>
+				<rewrite>
+					<product>CK_Site_Model_Catalog_Product</product>
+				</rewrite>
+			</catalog>
+			-->
+		</models>
+		<blocks>
+			<ck_site>
+				<class>CK_Site_Block</class>
+			</ck_site>
+		</blocks>
+		<helpers>
+			<ck_site>
+				<class>CK_Site_Helper</class>
+			</ck_site>
+		</helpers>
+	</global>
+
+	<adminhtml>
+		<layout>
+			<updates>
+				<ck_site>
+					<file>ck/site.xml</file>
+				</ck_site>
+			</updates>
+		</layout>
+	</adminhtml>
+</config>

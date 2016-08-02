@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<restomotive translate="label" module="ck_site">
+			<label>RestoMotive</label>
+			<sort_order>1000</sort_order>
+		</restomotive>
+	</tabs>
+</config>

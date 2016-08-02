@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<ck_index translate="label" module="ck_index">
+			<class>separator-top</class>
+			<label><![CDATA[Indexing]]></label>
+			<tab>restomotive</tab>
+			<sort_order>20</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<solr translate="label" module="ck_index">
+					<label>SOLR Settings</label>
+					<frontend_type>select</frontend_type>
+					<sort_order>0</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<host translate="label">
+							<label>Host</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</host>
+						<core translate="label">
+							<label>Core</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</core>
+					</fields>
+				</solr>
+			</groups>
+		</ck_index>
+	</sections>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<CK_Site>
+			<active>true</active>
+			<codePool>local</codePool>
+		</CK_Site>
+	</modules>
+</config>

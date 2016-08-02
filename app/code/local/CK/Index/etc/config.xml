@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<CK_Index>
+			<version>0.1.0</version>
+		</CK_Index>
+	</modules>
+
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<CK_Index_Adminhtml before="Mage_Adminhtml">CK_Index_Adminhtml</CK_Index_Adminhtml>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+
+	<global>
+		<models>
+			<ck_index>
+				<class>CK_Index_Model</class>
+			</ck_index>
+			<catalog>
+				<rewrite>
+					<product>CK_Index_Model_Catalog_Product</product>
+				</rewrite>
+			</catalog>
+		</models>
+		<blocks>
+			<ck_index>
+				<class>CK_Index_Block</class>
+			</ck_index>
+		</blocks>
+		<helpers>
+			<ck_index>
+				<class>CK_Index_Helper</class>
+			</ck_index>
+		</helpers>
+		<resources>
+			<ck_index_setup>
+				<setup>
+					<module>CK_Index</module>
+					<class>CK_Index_Model_Resource_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</ck_index_setup>
+			<ck_index_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</ck_index_write>
+			<ck_index_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</ck_index_read>
+		</resources>
+	</global>
+
+	<adminhtml>
+		<layout>
+			<updates>
+				<ck_index>
+					<file>ck/site.xml</file>
+				</ck_index>
+			</updates>
+		</layout>
+	</adminhtml>
+</config>
