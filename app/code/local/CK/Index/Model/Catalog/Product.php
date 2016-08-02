@@ -3,16 +3,15 @@ class CK_Index_Model_Catalog_Product extends Mage_Catalog_Model_Product
 {
 	public function toSolrDocument()
 	{
-		$document = array();
-		$data = $this->getData();
+		$product = $this;
+		$document = array('id' => $this->getStoreId() . '-' . $this->getId());
 
 		if(!$this->_isLoaded()){
 			$product = Mage::getModel('catalog/product')->load($this->getId());
-			$data = $product->getData();
 		}
 
 		foreach(CK_Index_Model_Index::PRODUCT_MAP as $attribute => $index){
-			$document[$index] = isset($data[$attribute]) ? $data[$attribute] : null;
+			$document[$index] = $product->getData($attribute);
 		}
 		return $document;
 	}
